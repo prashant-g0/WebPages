@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NavBar</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .container{
+            display: flex;
+            font-size: 14px;
+            height: 100vh;
+            background: wheat;
+        }
+
+        .navbar{
+            margin: auto;
+            padding: 0.5rem 1.5rem;
+            background: rgb(236, 198, 128);
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .navlinks{
+            display: flex;
+            gap: 2rem;
+        }
+
+        .links, .drop-down li {
+            list-style: none;
+            height: 100%;
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a{
+            text-decoration: none;
+            color: currentColor;
+        }
+
+        .drop-down{
+            position: absolute;
+            padding: 0.5rem 0;
+            margin: 0.5rem -0.8rem;
+            background: antiquewhite;
+            color: black;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border-radius: 0.5rem;
+            font-size: 12px;
+            display: none;
+        }
+
+        .links:hover{
+            background-color: black;
+            color: white;
+            border-radius: 0.5rem;
+        }
+
+        .drop:hover .drop-down{
+            display: block; 
+        }
+
+        .links a{
+            display: flex;
+        }
+
+        .services li:hover{
+            background-color: black;
+            color: white;
+            border-radius: 0.5rem;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <ul class="navlinks services">
+                <li class="links">
+                    <a href="#">Home</a>
+                </li>
+                <li class="links drop">
+                    <a href="#">Services</a>
+                    <ul class="drop-down">
+                        <li>Service 1</li>
+                        <li>Service 2</li>
+                        <li>Service 3</li>
+                        <li>Service 4</li>
+                    </ul>
+                </li>
+                <li class="links">
+                    <a href="#">About</a>
+                </li>
+                <li class="links">
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+</html>
