@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@800&family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@800&family=Poppins:wght@200&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.main {
+  font-family: "Poppins", sans-serif;
+  background-image: url(netflixbg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: max(1200px, 100vw);
+  height: 70vh;
+  width: 100%;
+  position: absolute;
+}
+
+.main .box {
+  height: 70vh;
+  width: 100%;
+  opacity: 0.76;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  max-width: 90vw;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+nav img,
+button {
+  position: relative;
+  z-index: 10;
+}
+
+.write {
+  font-family: "Martel Sans", sans-serif;
+  height: calc(100% - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  gap: 10px;
+  padding: 0 30;
+}
+
+.write > :first-child {
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.write :nth-child(2) {
+  font-size: 10px;
+  font-weight: 200;
+  text-align: center;
+}
+
+.write > :nth-child(3) {
+  font-size: 12px;
+  font-weight: 350;
+  text-align: center;
+}
+
+.separation {
+  height: 4px;
+  background-color: rgb(62, 60, 60);
+}
+
+.btn {
+  padding: 6px 30px;
+  background-color: rgba(48, 46, 46, 0.082);
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn.btn-red {
+  background-color: red;
+  color: white;
+  padding: 7px 20px;
+  border-radius: 4px;
+  border: 1px solid white;
+  font-size: 20px;
+}
+
+.main input {
+  background-color: rgba(23, 23, 23, 0.2);
+  color: white;
+  padding: 10px 40px;
+  border-radius: 4px;
+  border: 1px solid white;
+}
+
+.btn-red-sm {
+  background-color: red;
+  color: white;
+  border: 1px solid white;
+}
+
+.first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  color: white;
+  margin: 20px;
+  padding: 34px;
+}
+
+.first > div {
+  flex: 1;
+  padding: 20px;
+}
+
+.secvid {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.secvid video {
+  max-width: 100%;
+}
+
+
+.first > div:last-child {
+    text-align: right;
+}
+
+.big {
+    font-family: "Martel Sans", sans-serif;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.small {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+}
+
+.faq{
+    color: white;
+    background: black;
+    padding: 34px;
+}
+
+.faq h2{
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.faqbox{
+    display: flex;
+    margin: 20px auto;
+}
+    
+.faqbox1{
+    display: flex;
+    justify-content: space-between;
+    background-color:#2d2d2d;
+    padding: 10px 34px;
+    max-width: 60vw;
+    margin: 5px auto;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.faqbox1:hover{
+    background-color: red;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+    padding: 34px;
+    margin: 50px 70px;
+}
+
+footer a{
+    color: white;
+    font-size: 12px;
+}
+    
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-rights{
+    font-size: 15px;
+    color: #828282;
+    margin: 20px 0px;
+}
+
+
+/* Add this media query to make adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  /* Adjust main container */
+  .main {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 70px; /* Account for the navigation bar height */
+    background-size: contain; /* Adjust background image size */
+    overflow: hidden;
+    background-position: center top;
+  }
+
+  /* Align navigation items to the left */
+  nav {
+    justify-content: flex-start;
+  }
+
+  /* Adjust spacing between Netflix logo and buttons */
+  nav img {
+    margin-right: 10px;
+  }
+
+  /* Stack email input and button vertically */
+  .write > div {
+    flex-direction: column;
+  }
+
+  /* Adjust email input styles */
+  .main input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Limit .box height to fit email input */
+  .main .box {
+    height: auto;
+    max-height: 250px; /* Adjust maximum height */
+    opacity: 0.76;
+    background-color: black;
+    position: absolute;
+    top: 0;
+  }
+
+  /* Full width for "Get Started" button */
+  .btn.btn-red {
+    width: 100%;
+  }
+
+  /* Adjust padding in .write section */
+  .write {
+    padding: 0 15px;
+  }
+
+  /* Stack elements vertically in .first section */
+  .first {
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+  }
+
+  /* Make videos and images responsive */
+  .secvid video,
+  .secvid img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Adjust width for FAQ boxes */
+  .faqbox1 {
+    max-width: 90vw;
+  }
+
+  /* Adjust font size for FAQ heading */
+  .faq h2 {
+    font-size: 32px;
+  }
+
+  /* Adjust footer layout to two columns */
+  footer {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    margin: 20px;
+  }
+}
+
+
